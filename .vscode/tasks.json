@@ -1,14 +1,12 @@
 {
     "version": "2.0.0",
-    "tasks": [
+    "tasks": [   
         {
-            "label": "Build Main",
-            "type": "shell",
-            "command": "g++ -g main.cpp Sequencer.cpp NamedSequencer.cpp -o main.out",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
+            "type": "cmake",
+            "label": "CMake: build",
+            "command": "build",
+            "preset": "${command:cmake.activeBuildPresetName}",
+            "detail": "CMake template build task"
+        }     
     ]
 }
